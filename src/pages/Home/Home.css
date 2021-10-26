@@ -1,0 +1,29 @@
+#background-home {
+  background-color: #282c34;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: -2
+}
+
+#home-container {
+  display: grid;
+  grid-template-areas:
+    "nav nav"
+    "sidebar content";
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 50px 1fr;
+  height: 100vh;
+}
+
+#navbar {
+  grid-area: nav;
+}
+
+#sidebar {
+  grid-area: sidebar;
+}
+
+#home-content {
+  grid-area: content;
+}
