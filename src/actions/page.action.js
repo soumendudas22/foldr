@@ -27,3 +27,17 @@ export const setPages = (pages) => {
     payload: { pages }
   }
 }
+
+export const setPageForId = ({page_Id, page}) => {
+  return {
+    type: actions.SET_PAGE,
+    payload: { page_Id, page }
+  }
+}
+
+export const selectedPage = ({page_Id}) => {
+  return {
+    type: actions.SELECTED_PAGE,
+    payload: { page_Id }
+  }
+}

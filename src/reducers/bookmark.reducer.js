@@ -2,50 +2,33 @@ import * as actions from '@util/action.type';
 import produce from "immer";
 
 const initialState = {
-  pages: []
+  pages: [],
+  selected_page: {
+    page_Id: 0,
+    collections: []
+  }
 }
-
-// const pageObj = {
-//   page_Id: 0,
-//   title: '',
-//   collections: []
-// }
-
-// const collectionObj = {
-//   collection_Id: 0,
-//   title: '',
-//   bookmarks: []
-// }
-
-// const bookmarkObj = {
-//   bookmark_Id: 0,
-//   title: '',
-//   url: '',
-//   dateAdded: ''
-// }
-
-const getPageIndex = (id, state) => state.pages.findIndex(x => x.page_Id === id);
 
 const bookmarkReducer = (state = initialState, action) => {
   switch (action.type) {
-    case actions.ADD_PAGE: 
-    return produce(state, draft => {
-      draft.pages.push({
-        page_Id: action.payload.page_Id,
-        title: action.payload.title,
-        collections: []
+    case actions.ADD_PAGE:
+      return produce(state, draft => {
+        draft.pages.push({
+          page_Id: action.payload.page_Id,
+          title: action.payload.title,
+          collections: []
+        });
       });
-    });
 
     case actions.DELETE_PAGE:
-      return { 
-        ...state, 
-        pages: state.pages.filter(page=>page.page_Id!==getPageIndex(action.payload.page_Id, state)) 
+      return {
+        ...state,
+        pages: state.pages.filter(page => page.page_Id !== action.payload.page_Id)
       };
 
     case actions.UPDATE_PAGE:
-      return produce(state, draft=> {
-        const page = draft.find(page => page.page_Id === action.payload.page_Id);
+      return produce(state, draft => {
+        const page = draft.pages.find(page => page.page_Id === action.payload.page_Id);
         page.title = action.payload.title;
       });
 
@@ -54,6 +37,19 @@ const bookmarkReducer = (state = initialState, action) => {
         ...state,
         pages: action.payload.pages
       }
+
+    case actions.SET_PAGE:
+      return produce(state, draft => {
+        let index = draft.pages.findIndex(page => page.page_Id === action.payload.page_Id);
+        draft.pages[index] = action.payload.page;
+      });
+
+    case actions.SELECTED_PAGE: 
+      return produce(state, draft => {
+        let page = draft.pages.find(page => page.page_Id === action.payload.page_Id);
+        draft.selected_page = page;
+      });
+
     default: return state;
   }
 }

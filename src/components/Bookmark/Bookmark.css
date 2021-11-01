@@ -1,0 +1,20 @@
+.bookmark-wrapper {
+  width: 100%;
+  margin: 3px 0;
+  background-color: white;
+  border-radius: 4px;
+  text-align: start;
+  display: flex;
+  align-items: center;
+}
+
+.bookmark-wrapper:not(:first-child) {
+  margin-top: 7px;
+}
+
+.bookmark-link {
+  text-decoration: none;
+  color: rgb(66, 66, 66);
+  padding: 5px;
+  font-size: 0.85em;
+}

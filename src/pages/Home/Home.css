@@ -24,6 +24,7 @@
   grid-area: sidebar;
 }
 
-#home-content {
+#content {
   grid-area: content;
+  position: relative;
 }

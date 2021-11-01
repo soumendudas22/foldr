@@ -11,6 +11,8 @@ export const ADD_PAGE = "ADD_PAGE";
 export const DELETE_PAGE = "DELETE_PAGE";
 export const UPDATE_PAGE = "UPDATE_PAGE";
 export const SET_PAGES = "SET_PAGES";
+export const SET_PAGE = "SET_PAGE";
+export const SELECTED_PAGE = "SELECTED_PAGE";
 
 // COLLECTIONS
 export const ADD_COLLECTION = "ADD_COLLECTION";

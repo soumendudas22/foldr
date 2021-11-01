@@ -1,6 +1,6 @@
 @baseurl = https://foldr.herokuapp.com
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjYiLCJlbWFpbCI6InNvdW1lbmR1ZGFzMjIwOEBnbWFpbC5jb20iLCJzdWIiOiJzb3VtZW5kdWRhczIyMDhAZ21haWwuY29tIiwianRpIjoiNDFlZDQxMjQtNTI4OS00ZDk4LTk1NDYtNjFiYzE2NGE2M2Q3IiwibmJmIjoxNjM1MDgyMDg4LCJleHAiOjE2MzY4MTAwODgsImlhdCI6MTYzNTA4MjA4OH0.xORxthVxnpK1l3mkm3vrKLBBh34EsEYqJuT8bcLc2cU
-@refreshtoken = POR0S4CRN6P1KMJPSUQ2Q0YJ4NDTZYINNP7398IL671f7431-a16f-475e-ac88-d7e60af74313
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjYiLCJlbWFpbCI6InNvdW1lbmR1ZGFzMjIwOEBnbWFpbC5jb20iLCJzdWIiOiJzb3VtZW5kdWRhczIyMDhAZ21haWwuY29tIiwianRpIjoiYjE0NjdiM2MtNzdjYS00NGQxLWE2ZWItODNhNjUxYjM3MGZkIiwibmJmIjoxNjM1NTgxNjM3LCJleHAiOjE2MzczMDk2MzcsImlhdCI6MTYzNTU4MTYzN30.Rqb1eC7pWe3CvA2QxD6AGqe5kjBd4hi-v7WMHXgVDIU
+@refreshtoken = 319JO6OVUCFGQCRDPI4I5TN84PG7BCQGIDWCRLLHd6360a62-fd62-4f83-8ff0-a68fdcbbf375
 @idtoken = eyJhbGciOiJSUzI1NiIsImtpZCI6ImFkZDhjMGVlNjIzOTU0NGFmNTNmOTM3MTJhNTdiMmUyNmY5NDMzNTIiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJhY2NvdW50cy5nb29nbGUuY29tIiwiYXpwIjoiMTA4NjU5MjkwODMwMC1ldDNhNDRvNTUzcWw5YmRxcTRnaG1sZGM0dTBocmZoMi5hcHBzLmdvb2dsZXVzZXJjb250ZW50LmNvbSIsImF1ZCI6IjEwODY1OTI5MDgzMDAtZXQzYTQ0bzU1M3FsOWJkcXE0Z2htbGRjNHUwaHJmaDIuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDUzMjU5MjYxNjg3MTU5MDg4OTEiLCJlbWFpbCI6InNvdW1lbmR1ZGFzMjIwOEBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiYXRfaGFzaCI6IjZHZVo3RTNmYW1JX040TF9nSWlqdmciLCJuYW1lIjoiU291bWVuZHUgRGFzIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hLS9BT2gxNEdpbEVIeXFLYThUb2RnQnZHNGo1OUdldTlsTk5SRzA3WVlIT21JVz1zOTYtYyIsImdpdmVuX25hbWUiOiJTb3VtZW5kdSIsImZhbWlseV9uYW1lIjoiRGFzIiwibG9jYWxlIjoiZW4iLCJpYXQiOjE2MzQ4ODM2MjAsImV4cCI6MTYzNDg4NzIyMCwianRpIjoiODcwMGQxNjdmZDNlYmJmODVhOTI1NTNkODUxNjExNmE2ODQ1ZWVjMSJ9.dhlKcsCQxtIM0QrJS1H5ICF-Cw7JlZz__Fwsu9Ib8FnLKYxVPzowrYTED7R7XM33blhoUT8pW6VgHFIh1cgRzBOVLFCiuh7qSWEkOqbjaSud2i96lsnOMxlvG_tvKnixtNJYfwmyUvhp_0tww40IjY4nGJMXO_Q5Fv27v9y_xr6p_dBd1kQ1ahessDi0XEX2ds4ra5MUoxaEPx7lDmStO4JtjlSo6W0IahGPYjQZ89tV-CAifqZ5EaHbYGUsJZKKAs0WAXkCdgxuvJ_YLEmrBzWioZ1WJoyPJ8oVtiANEYJCKsf5U9d_QhAYtRkt1Q8y7-0MpA7z38EPtlYoaYJfzA
 
 
@@ -31,7 +31,7 @@ Content-Type: application/json
 
 ### PAGE FUNCTIONS
 ### GET ALL DATA FOR A PAGE
-GET {{baseurl}}/api/page/10
+GET {{baseurl}}/api/page/99
 Authorization: Bearer {{token}}
 
 ### CREATE NEW PAGE
@@ -40,7 +40,7 @@ Content-Type: application/json
 Authorization: Bearer {{token}}
 
 {
-  "title" : "ek bada page ka naam"
+  "title" : "Web dev"
 }
 
 ### DELETE PAGE
@@ -49,7 +49,7 @@ Authorization: Bearer {{token}}
 Content-Type: application/json
 
 {
-  "id" : "5"
+  "id" : "75"
 }
 
 ### UPDATE PAGE
@@ -71,8 +71,8 @@ Content-Type: application/json
 Authorization: Bearer {{token}}
 
 {
-  "title" : "coll 1",
-  "pageid" : "55"
+  "title" : "Tools for UI/UX",
+  "pageid" : "100" 
 }
 
 ### DELETE COLLECTION
@@ -82,7 +82,7 @@ Content-Type: application/json
 
 {
   "id" : "20",
-  "pageid" : "5"
+  "pageid" : "93"
 }
 
 ### UPDATE COLLECTION
@@ -95,7 +95,7 @@ Content-Type: application/json
     "collection_id" : "22",
     "title" : "new updated collection title"
   },
-  "pageid" : "6"
+  "pageid" : "93"
 }
 
 ### BOOKMARK FUNCTIONS
@@ -103,12 +103,13 @@ Content-Type: application/json
 POST {{baseurl}}/api/bookmark
 Content-Type: application/json
 Authorization: Bearer {{token}}
+#104, 105 for page 99
+#106 for page 100
 
 {
-  "title" : "Green Day cover",
-  "url" : "https://www.youtube.com/watch?v=vsibrXgfgb4",
-  "collectionid" : "39",
-  "pageid" : "55"
+  "url" : "https://www.alskdja.com",
+  "collectionid" : "106",
+  "pageid" : "100"
 }
 
 ### DELETE BOOKMARK
