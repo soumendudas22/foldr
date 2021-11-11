@@ -4,7 +4,8 @@ import Login from "@pages/Login";
 import Home from "@pages/Home/Home";
 import AuthenticatedRoute from "@components/AuthRoute/AuthenticatedRoute";
 
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
+import NotFound from '@components/404';
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
               path="/home"
               component={Home}
             />
+            <Route exact path="/" render={() => (<Redirect to="/home" />)} />
+            <Route path="" component={NotFound} />
           </Switch>
         </Router>
       </div>
