@@ -3,6 +3,7 @@ import { parseJwt } from '@util/auth.interceptor';
 import { useHistory } from "react-router-dom";
 import { useDispatch } from 'react-redux';
 import * as auth from '@actions/auth.action';
+import * as page from '@actions/page.action';
 
 export default function Navbar({ name, picture }) {
   const tokenId = localStorage.getItem("tokenId");
@@ -19,6 +20,7 @@ export default function Navbar({ name, picture }) {
     localStorage.clear();
     dispatch(auth.loginSuccess({ email: '', exp: 0, name: '', picture: '', success: false }));
     history.replace('/login');
+    dispatch(page.reset());
   }
 
   return (<>

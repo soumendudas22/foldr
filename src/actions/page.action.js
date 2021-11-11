@@ -41,3 +41,9 @@ export const selectedPage = ({page_Id}) => {
     payload: { page_Id }
   }
 }
+
+export const reset = () => {
+  return {
+    type: actions.RESET
+  }
+}

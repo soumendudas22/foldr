@@ -6,6 +6,8 @@
   text-align: start;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  min-height: 40px;
 }
 
 .bookmark-wrapper:not(:first-child) {
@@ -17,4 +19,48 @@
   color: rgb(66, 66, 66);
   padding: 5px;
   font-size: 0.85em;
+  display: flex;
+  align-items: center;
+}
+
+.bookmark-delete {
+  display: flex;
+  align-items: center;
+}
+
+.bookmark-delete button {
+  display: none;
+}
+
+.bookmark-wrapper:hover .bookmark-delete button {
+  display: grid;
+  border-radius: 100%;
+  place-items: center;
+  padding: 7px;
+  border: none;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.bookmark-wrapper:hover .bookmark-delete button:last-child {
+  background-color: rgb(177, 49, 40);
+}
+
+.bookmark-wrapper:hover .bookmark-delete button:first-child {
+  background-color: rgb(40, 99, 177);
+}
+
+.bookmark-input {
+  padding: 5px;
+  border-radius: 2px;
+  border: 1px solid black;
+  outline: none;
+  color: grey;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.bookmark-title {
+  color: grey;
+  line-height: 14px;
 }

@@ -44,11 +44,23 @@ const bookmarkReducer = (state = initialState, action) => {
         draft.pages[index] = action.payload.page;
       });
 
-    case actions.SELECTED_PAGE: 
+    case actions.SELECTED_PAGE:
       return produce(state, draft => {
         let page = draft.pages.find(page => page.page_Id === action.payload.page_Id);
         draft.selected_page = page;
       });
+
+    case actions.DELETE_URL:
+      return produce(state, draft => {
+        const pageIndex = draft.pages.findIndex(page => page.page_Id === action.payload.page_Id);
+        const collectionIndex = draft.pages[pageIndex].collections.findIndex(coll => coll.collection_Id === action.payload.collection_Id);
+        draft.pages[pageIndex].collections[collectionIndex].bookmarks.filter(bm => bm.bookmark_Id === action.payload.collection_Id);
+      });
+
+    case actions.RESET:
+      return {
+        ...initialState
+      };
 
     default: return state;
   }

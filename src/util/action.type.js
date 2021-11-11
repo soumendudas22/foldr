@@ -23,3 +23,6 @@ export const UPDATE_COLLECTION = "UPDATE_COLLECTION";
 export const ADD_URL = "ADD_URL";
 export const DELETE_URL = "DELETE_URL";
 export const UPDATE_URL = "UPDATE_URL";
+
+// RESET
+export const RESET = "RESET";

@@ -8,7 +8,6 @@ const isLoggedIn = () => {
 export function jwtInterceptor() {
   axios.interceptors.request.use(
     request => {
-      console.log('workingg......')
       if (isLoggedIn()) request.headers.common.Authorization = `Bearer ${localStorage.getItem("token")}`;
       return request;
     }
@@ -36,7 +35,6 @@ export function jwtInterceptor() {
             refreshToken: JSON.parse(localStorage.getItem("token")).refreshToken
           }),
         }).then(res => res.json()).then(res => {
-          console.log('AFTER INTERCEPT',res);
           this.setSession({ token: res.token, refreshToken: res.refreshToken });
           return axios(originalReq);
         });

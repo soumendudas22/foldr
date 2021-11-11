@@ -81,8 +81,8 @@ Authorization: Bearer {{token}}
 Content-Type: application/json
 
 {
-  "id" : "20",
-  "pageid" : "93"
+  "id" : "107",
+  "pageid" : "100"
 }
 
 ### UPDATE COLLECTION
@@ -107,7 +107,7 @@ Authorization: Bearer {{token}}
 #106 for page 100
 
 {
-  "url" : "https://www.alskdja.com",
+  "url" : "https://www.deleteme.com",
   "collectionid" : "106",
   "pageid" : "100"
 }
@@ -118,9 +118,9 @@ Authorization: Bearer {{token}}
 Content-Type: application/json
 
 {
-  "id" : "4", 
-  "collectionid" : "22",
-  "pageid" : "5"
+  "id" : "96", 
+  "collectionid" : "104",
+  "pageid" : "99"
 }
 
 ### UPDATE BOOKMARK
@@ -130,9 +130,8 @@ Content-Type: application/json
 
 {
   "bookmark" : {
-    "bookmark_id" : "9",
-    "title" : "my god new title",
-    "url" : "https://newurl.com"
+    "bookmark_id" : "128",
+    "title" : "my god new title"
   },
-  "collectionid" : "22"
+  "collectionid" : "106"
 }

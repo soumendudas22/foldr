@@ -28,9 +28,10 @@ export default function Main({ open = true }) {
 
   useEffect(() => {
     API.GET_DEFAULT_INFO(JSON.parse(localStorage.getItem("token")).token)
-      .then(res => {
+    .then(res => {
         if (res.data.success) {
           dispatch(page.setPages(res.data.defaultInfo));
+          if(res.data.defaultInfo.length!==0) dispatch(page.selectedPage({ page_Id: res.data.defaultInfo[0].page_Id }));
           setPages(res.data.defaultInfo);
         }
       });
